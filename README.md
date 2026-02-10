@@ -120,3 +120,15 @@ Desktop environment:
     - [ ] Create a web interface
   - [ ] API
 - [ ] Rust time baby!
+
+## Plans, changes, and improvements
+- [ ] Add support for other shells
+- [ ] Add support for other operating systems
+- [ ] Add support for other languages
+- [ ] Add support for other configuration formats (JSON and YAML)
+- [ ] Add support for server environments (bare metal)
+  - [ ] Add support for systemd
+  - [ ] Add support for other databases
+- [ ] Add support for Docker
+  - [ ] Add support for other databases
+  - [ ] Publish the image on Docker Hub
