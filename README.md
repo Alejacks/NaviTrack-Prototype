@@ -26,7 +26,7 @@ It's meant for both the user that wants a simple CLI tool and the developer that
 
 Yet this prototype is not meant for production use, as it will be integrated into the official and more reliable Navia release for production use.
 
-[Do you want NaviTrack on a server? Take a look at the official Navia release and its different Use Cases]()
+[Do you want NaviTrack on a server? Take a look at the official Navia release and its different Use Cases (**NaviTrack server edition will be available soon**)]()
 
 Tracks can be numbered so that they can be accessed by their number.
 Tracks can also be named so that they can be accessed by their name.
@@ -35,7 +35,52 @@ These can be managed using the built-in CLI tool.
 ## How to use NaviTrack?
 NaviTrack is a simple CLI tool that can be used to navigate directories.
 
-**Tutorials will be available soon.**
+### Basic Usage
+To save the current working directory as track number 0:
+```sh
+track # Saves the pwd in track number 0
+```
+
+To cd to the directory stored in track number 0:
+```sh
+navi # Changes to the directory stored in track number 0
+```
+
+### Tracking with numbers
+To save the current working directory as track number 1:
+```sh
+track 1 # Saves the pwd in track number 1
+```
+
+To cd to the directory stored in track number 1:
+```sh
+navi 1 # Changes to the directory stored in track number 1
+```
+
+Tracks can also be stored even if they are not the pwd:
+```bash
+track 2 /home/foo
+# Saves the specified directory as track number 2
+```
+
+### Tracking with names
+To save the current working directory as track "foo":
+```sh
+track foo # Saves the pwd in track "foo"
+```
+
+To cd to the directory stored in track "home":
+```sh
+navi foo # Changes to the directory stored in track "foo"
+```
+
+Tracks can also be stored even if they are not the pwd:
+```bash
+track foo /home/bar
+# Saves the specified directory as track "foo"
+```
+
+**More tutorials will be available soon.**
 
 ## NaviTrack APIs
 NaviTrack has a simple API that can be used to integrate NaviTrack into other tools and languages.
@@ -53,3 +98,25 @@ It's fast! It's reliable! It's straightforward!
 It's also free and open-source, so any developer can contribute to the project, and any user can use it for free.
 
 Feedback on the project is more than welcome! I'm still a junior developer, so any help is appreciated.
+
+## Checklist
+Desktop environment:
+- [ ] Project structure and required functionality
+  - [ ] Read and parse config.toml
+  - [ ] Check if tracks.db exists and create it if it doesn't
+  - [ ] Read and parse tracks.db
+  - [ ] Save and load tracks by number
+  - [ ] Save and load tracks by name
+  - [ ] Create a wrapper for changing the directory
+- [ ] Basic CLI tool functionality (bash)
+  - [ ] Create all the commands and be able to parse arguments
+  - [ ] Tracks with numbers
+  - [ ] Tracks with names
+  - [ ] Navigation
+- [ ] Advanced functionality
+  - [ ] Export and import tracks to and from JSON and CSV files
+  - [ ] Web server
+    - [ ] Create web server
+    - [ ] Create a web interface
+  - [ ] API
+- [ ] Rust time baby!
