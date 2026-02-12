@@ -126,6 +126,10 @@ Desktop environment:
 - [ ] Add support for other operating systems
 - [ ] Add support for other languages
 - [ ] Add support for other configuration formats (JSON and YAML)
+  (Which requires →)
+  - [ ] Renovating the configuration class with _layers_ as objects
+    - [ ] Parsing a JSON / YAML into an object containing a dictionary which can have nested dictionaries 
+    - [ ] Be able to get the depth of that dictionary (max count of nested dictionaries)
 - [ ] Add support for server environments (bare metal)
   - [ ] Add support for systemd
   - [ ] Add support for other databases
