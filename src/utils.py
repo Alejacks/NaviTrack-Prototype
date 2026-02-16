@@ -1,7 +1,7 @@
 import tomllib
 
 from pathlib import Path
-from typing import Any
+from typing import Any, Collection
 
 
 def read_toml_file(file_path: str | Path) -> dict:
@@ -11,7 +11,7 @@ def read_toml_file(file_path: str | Path) -> dict:
         return tomllib.load(file)
 
 
-def check_value_within_collection(needle: Any, haystack: list[Any] | set[Any] | tuple[Any]) -> bool:
+def check_value_within_collection(needle: Any, haystack: Collection[Any]) -> bool:
     return needle in haystack
 
 
