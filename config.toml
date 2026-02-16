@@ -1,11 +1,11 @@
 [db]
 db_file = "~/.navia/navitrack.db"
-on_colide = "overwrite"
+on_collide = "overwrite"
 
 [expiration]
-expiration_time_units = "m"
-expiration_time = 1
-expiration_behavior = "shadow"
+unit = "m"
+time = 1
+behavior = "shadow"
 
 [navitrack]
 frecency = true
