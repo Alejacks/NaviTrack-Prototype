@@ -11,8 +11,12 @@ def read_toml_file(file_path: str | Path) -> dict:
         return tomllib.load(file)
 
 
-def check_value_within_collection(needle: Any, haystack: Collection[Any]) -> bool:
+def needle_on_haystack(needle: Any, haystack: Collection[Any]) -> bool:
     return needle in haystack
 
+def needle_on_barn(needle: Any, haystack: Any, barn: dict[Any, Any]) -> bool:
+    if haystack in barn:
+        return needle in barn[haystack]
+    return False
 
-__all__ = ["read_toml_file", "check_value_within_collection"]
+__all__ = ["read_toml_file", "needle_on_haystack", "needle_on_barn"]
