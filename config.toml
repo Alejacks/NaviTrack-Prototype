@@ -2,10 +2,10 @@
 db_file = "~/.navia/navitrack.db"
 on_collide = "overwrite"
 
+[navitrack]
+frecency = true
+
 [expiration]
 unit = "m"
 time = 1
 behavior = "shadow"
-
-[navitrack]
-frecency = true
