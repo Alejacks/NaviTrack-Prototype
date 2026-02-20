@@ -99,6 +99,28 @@ class Config:
     def values(self) -> dict[str, Any]:
         return dict(self._config)
 
+    def get_db_path(self) -> Path:
+        return self.db_file_path
+
+    def get_config_section(self, section: str) -> dict[str, Any]:
+        try:
+            values_dict: dict[str, Any] = self.values()[section]
+            return values_dict
+        except KeyError:
+            raise ConfigNotFoundException(
+                f"{section} not found in configuration."
+            )
+
+    def get_config_value(self, section: str, key: str) -> Any:
+        try:
+            requested_values: dict[str, Any] = self.get_config_section(section)
+            value: Any = requested_values[key]
+            return value
+        except KeyError:
+            raise ConfigNotFoundException(
+                f"{key} not found in {section} configuration."
+            )
+
     def _check_configuration_values(self) -> None:
         self._check_db_values()
         self._check_navitrack_values()
