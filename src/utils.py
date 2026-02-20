@@ -24,6 +24,7 @@ def needle_on_barn(needle: Any, haystack: Any, barn: dict[Any, Any]) -> bool:
 
 
 def create_path_if_not_exists(path: Path) -> bool:
+    path = path.expanduser()
     try:
         if not path.exists():
             path.parent.mkdir(parents=True, exist_ok=True)
