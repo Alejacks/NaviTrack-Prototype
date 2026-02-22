@@ -101,9 +101,9 @@ Feedback on the project is more than welcome! I'm still a junior developer, so a
 
 ## Checklist
 Desktop environment:
-- [ ] Project structure and required functionality
-  - [ ] Read and parse config.toml
-  - [ ] Check if tracks.db exists and create it if it doesn't
+- [x] Project structure and required functionality
+  - [x] Read and parse config.toml
+  - [x] Check if tracks.db (navitrack.db for now) exists and create it if it doesn't
   - [ ] Read and parse tracks.db
   - [ ] Save and load tracks by number
   - [ ] Save and load tracks by name
@@ -119,6 +119,8 @@ Desktop environment:
     - [ ] Create web server
     - [ ] Create a web interface
   - [ ] API
+- [ ] Being able to set logging from the TOML file (with different levels, debugging...)
+- [ ] Write a man page and usage documentation for using arguments. Show these usage messages when arguments aren't used properly 
 - [ ] Rust time baby!
 
 ## Plans, changes, and improvements
